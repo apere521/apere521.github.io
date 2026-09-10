@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一色导航-精选优质网站分类导航与上网入口指南</title>
+<meta name="description" content="一色导航是一个简洁实用的网址分类导航站，收录常用工具、学习资源、影音娱乐、生活服务等优质网站，帮助用户快速找到所需入口，提升上网效率。">
+<meta name="keywords" content="一色导航,网址导航,网站分类,上网入口,优质网站收录,导航站">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --bg:#f5f7fa;
+  --panel:#ffffff;
+  --ink:#1f2430;
+  --ink-2:#5a6272;
+  --line:#e3e7ee;
+  --brand:#2f6bff;
+  --brand-2:#5b8cff;
+  --brand-soft:#eaf0ff;
+  --accent:#ff8a3d;
+  --radius:14px;
+  --shadow:0 6px 24px rgba(31,36,48,.07);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* ============ 顶栏 ============ */
+.topbar{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+.topbar-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  height:66px;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:20px;
+  font-weight:800;
+  letter-spacing:.5px;
+  flex-shrink:0;
+}
+.logo-mark{
+  width:34px;height:34px;
+  border-radius:10px;
+  background:linear-gradient(135deg,var(--brand),#8fb0ff);
+  color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:17px;font-weight:800;
+  box-shadow:0 4px 12px rgba(47,107,255,.3);
+}
+.logo span small{display:block;font-size:11px;font-weight:500;color:var(--ink-2);letter-spacing:2px}
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  flex-wrap:wrap;
+}
+.nav-links a{
+  padding:8px 14px;
+  border-radius:9px;
+  font-size:15px;
+  color:var(--ink-2);
+  transition:.2s;
+}
+.nav-links a:hover,.nav-links a.active{
+  background:var(--brand-soft);
+  color:var(--brand);
+}
+.top-search{
+  display:flex;
+  align-items:center;
+  background:var(--bg);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:0 12px;
+  height:40px;
+  min-width:220px;
+}
+.top-search input{
+  border:none;background:transparent;outline:none;
+  font-size:14px;width:100%;color:var(--ink);
+  font-family:inherit;
+}
+.top-search button{
+  border:none;background:var(--brand);color:#fff;
+  border-radius:7px;padding:5px 12px;font-size:13px;
+  cursor:pointer;font-family:inherit;
+}
+.top-search button:hover{background:var(--brand-2)}
+
+/* ============ Hero ============ */
+.hero{
+  background:linear-gradient(160deg,#eef3ff 0%,#f8faff 55%,#fff 100%);
+  border-bottom:1px solid var(--line);
+  padding:56px 0 48px;
+}
+.hero-inner{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:44px;
+  align-items:center;
+}
+.hero h1{
+  font-size:36px;
+  line-height:1.35;
+  letter-spacing:.5px;
+  margin-bottom:16px;
+}
+.hero h1 em{
+  font-style:normal;
+  color:var(--brand);
+}
+.hero p.lead{
+  font-size:16px;
+  color:var(--ink-2);
+  margin-bottom:26px;
+  max-width:560px;
+}
+.hero-search{
+  display:flex;
+  gap:10px;
+  max-width:540px;
+}
+.hero-search input{
+  flex:1;
+  height:50px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:#fff;
+  padding:0 18px;
+  font-size:15px;
+  outline:none;
+  font-family:inherit;
+  box-shadow:var(--shadow);
+  transition:.2s;
+}
+.hero-search input:focus{border-color:var(--brand);box-shadow:0 0 0 4px rgba(47,107,255,.12)}
+.hero-search button{
+  height:50px;
+  padding:0 26px;
+  border:none;
+  border-radius:12px;
+  background:var(--brand);
+  color:#fff;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  font-family:inherit;
+  box-shadow:0 6px 18px rgba(47,107,255,.32);
+  transition:.2s;
+}
+.hero-search button:hover{background:#245ae0;transform:translateY(-1px)}
+.hero-tags{
+  margin-top:18px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  font-size:13px;
+  color:var(--ink-2);
+  align-items:center;
+}
+.hero-tags a{
+  padding:4px 12px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:20px;
+  transition:.2s;
+}
+.hero-tags a:hover{border-color:var(--brand);color:var(--brand)}
+.hero-side{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px 24px;
+  box-shadow:var(--shadow);
+}
+.hero-side h2{
+  font-size:15px;
+  margin-bottom:14px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.hero-side h2::before{
+  content:"";
+  width:4px;height:15px;
+  border-radius:2px;
+  background:var(--brand);
+}
+.quick-list{list-style:none}
+.quick-list li{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:9px 0;
+  border-bottom:1px dashed var(--line);
+  font-size:14px;
+}
+.quick-list li:last-child{border-bottom:none}
+.quick-icon{
+  width:30px;height:30px;
+  border-radius:8px;
+  background:var(--brand-soft);
+  color:var(--brand);
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:700;
+  flex-shrink:0;
+}
+.quick-list li span.desc{color:var(--ink-2);font-size:12.5px;margin-left:auto}
+
+/* ============ 通用区块 ============ */
+.section{padding:52px 0}
+.section-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:26px;
+  flex-wrap:wrap;
+}
+.section-head h2{
+  font-size:23px;
+  letter-spacing:.4px;
+}
+.section-head h2 small{
+  display:block;
+  font-size:13px;
+  font-weight:400;
+  color:var(--ink-2);
+  margin-top:6px;
+  letter-spacing:.3px;
+}
+.section-head .more{
+  font-size:14px;
+  color:var(--brand);
+}
+.section-head .more:hover{text-decoration:underline}
+
+/* ============ 分类导航卡 ============ */
+.cat-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.cat-card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px 22px 18px;
+  transition:.25s;
+}
+.cat-card:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow);
+  border-color:#d3ddf5;
+}
+.cat-card .cat-top{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:14px;
+}
+.cat-badge{
+  width:40px;height:40px;
+  border-radius:11px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:17px;
+  color:#fff;
+  flex-shrink:0;
+}
+.b1{background:linear-gradient(135deg,#2f6bff,#7aa2ff)}
+.b2{background:linear-gradient(135deg,#ff8a3d,#ffb27a)}
+.b3{background:linear-gradient(135deg,#12b886,#5cd6a8)}
+.b4{background:linear-gradient(135deg,#845ef7,#b197fc)}
+.b5{background:linear-gradient(135deg,#f06595,#f7a1bb)}
+.b6{background:linear-gradient(135deg,#0ca5c4,#5fd3e8)}
+.cat-card h3{font-size:16.5px}
+.cat-card h3 small{display:block;font-size:12px;color:var(--ink-2);font-weight:400;margin-top:2px}
+.cat-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.cat-links a{
+  font-size:13.5px;
+  color:var(--ink-2);
+  background:var(--bg);
+  border-radius:7px;
+  padding:4px 11px;
+  transition:.2s;
+}
+.cat-links a:hover{background:var(--brand-soft);color:var(--brand)}
+
+/* ============ 精选推荐 ============ */
+.pick-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+.pick-card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  transition:.25s;
+}
+.pick-card:hover{box-shadow:var(--shadow);transform:translateY(-3px);border-color:#d3ddf5}
+.pick-card .pc-head{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.pc-logo{
+  width:36px;height:36px;
+  border-radius:10px;
+  background:var(--brand-soft);
+  color:var(--brand);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:15px;
+  flex-shrink:0;
+}
+.pick-card h3{font-size:15.5px}
+.pick-card p{font-size:13.5px;color:var(--ink-2);flex:1}
+.pc-tag{
+  align-self:flex-start;
+  font-size:12px;
+  color:var(--brand);
+  background:var(--brand-soft);
+  border-radius:6px;
+  padding:2px 9px;
+}
+
+/* ============ 指南内容 ============ */
+.guide-wrap{
+  display:grid;
+  grid-template-columns:1.6fr 1fr;
+  gap:36px;
+  align-items:start;
+}
+.article-block{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:32px 34px;
+}
+.article-block h2{
+  font-size:21px;
+  margin-bottom:16px;
+}
+.article-block h3{
+  font-size:16.5px;
+  margin:24px 0 10px;
+  color:var(--ink);
+}
+.article-block p{
+  font-size:14.5px;
+  color:#3c4453;
+  margin-bottom:12px;
+}
+.article-block ul{
+  margin:8px 0 16px 20px;
+  font-size:14.5px;
+  color:#3c4453;
+}
+.article-block li{margin-bottom:7px}
+.tip-box{
+  background:var(--brand-soft);
+  border-left:4px solid var(--brand);
+  border-radius:0 10px 10px 0;
+  padding:14px 18px;
+  font-size:14px;
+  color:#2b4a8f;
+  margin:18px 0;
+}
+.side-stack{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+.side-card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px 22px 18px;
+}
+.side-card h3{
+  font-size:15.5px;
+  margin-bottom:14px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.side-card h3::before{
+  content:"";
+  width:4px;height:14px;border-radius:2px;background:var(--accent);
+}
+.side-card ol,.side-card ul{
+  margin-left:18px;
+  font-size:14px;
+  color:var(--ink-2);
+}
+.side-card li{margin-bottom:9px}
+.side-card li b{color:var(--ink);font-weight:600}
+
+/* ============ 使用步骤 ============ */
+.steps{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+  counter-reset:step;
+}
+.step{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:24px 20px;
+  position:relative;
+}
+.step::before{
+  counter-increment:step;
+  content:counter(step);
+  position:absolute;
+  top:-14px;left:20px;
+  width:30px;height:30px;
+  border-radius:9px;
+  background:var(--brand);
+  color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:14px;
+  box-shadow:0 5px 14px rgba(47,107,255,.3);
+}
+.step h3{font-size:15.5px;margin:12px 0 8px}
+.step p{font-size:13.5px;color:var(--ink-2)}
+
+/* ============ FAQ ============ */
+.faq-list{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  overflow:hidden;
+}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-item:last-child{border-bottom:none}
+.faq-q{
+  width:100%;
+  text-align:left;
+  background:none;
+  border:none;
+  font-family:inherit;
+  font-size:15.5px;
+  font-weight:600;
+  color:var(--ink);
+  padding:18px 24px;
+  cursor:pointer;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+}
+.faq-q:hover{color:var(--brand)}
+.faq-q .arrow{
+  color:var(--ink-2);
+  transition:.25s;
+  font-size:13px;
+  flex-shrink:0;
+}
+.faq-item.open .faq-q .arrow{transform:rotate(180deg);color:var(--brand)}
+.faq-a{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .3s ease;
+}
+.faq-a p{
+  padding:0 24px 20px;
+  font-size:14.5px;
+  color:var(--ink-2);
+}
+
+/* ============ 页脚 ============ */
+footer{
+  background:#1b2130;
+  color:#a9b2c4;
+  margin-top:20px;
+  padding:46px 0 26px;
+  font-size:14px;
+}
+.foot-grid{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:32px;
+  margin-bottom:34px;
+}
+.foot-brand .logo{color:#fff;margin-bottom:12px}
+.foot-brand .logo span small{color:#8b94a8}
+.foot-brand p{font-size:13.5px;line-height:1.8;color:#8b94a8}
+.foot-col h4{
+  color:#fff;
+  font-size:14.5px;
+  margin-bottom:14px;
+  font-weight:600;
+}
+.foot-col a{
+  display:block;
+  font-size:13.5px;
+  color:#8b94a8;
+  padding:4px 0;
+  transition:.2s;
+}
+.foot-col a:hover{color:#fff}
+.foot-bottom{
+  border-top:1px solid #2b3244;
+  padding-top:20px;
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+  flex-wrap:wrap;
+  font-size:13px;
+  color:#727c92;
+}
+
+/* ============ 响应式 ============ */
+@media (max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;gap:32px}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .pick-grid{grid-template-columns:repeat(2,1fr)}
+  .guide-wrap{grid-template-columns:1fr}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:768px){
+  .topbar-inner{height:auto;padding:12px 0;flex-wrap:wrap}
+  .nav-links{order:3;width:100%;justify-content:flex-start}
+  .top-search{flex:1;min-width:0}
+  .hero{padding:38px 0 34px}
+  .hero h1{font-size:27px}
+  .hero-search{flex-direction:column}
+  .hero-search button{width:100%}
+  .section{padding:38px 0}
+  .article-block{padding:24px 20px}
+}
+@media (max-width:560px){
+  .cat-grid{grid-template-columns:1fr}
+  .pick-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .hero h1{font-size:24px}
+  .section-head h2{font-size:20px}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="logo" href="#top">
+      <span class="logo-mark">一</span>
+      <span>一色导航<small>YISE NAV</small></span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="#categories" class="active">分类导航</a>
+      <a href="#picks">精选推荐</a>
+      <a href="#guide">使用指南</a>
+      <a href="#steps">上手步骤</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <form class="top-search" role="search" onsubmit="return quickSearch(event)">
+      <input type="text" id="topSearchInput" placeholder="搜索站点或分类…" aria-label="搜索站点或分类">
+      <button type="submit">搜索</button>
+    </form>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <h1>一色导航，<em>把常用网站收进一个清爽入口</em></h1>
+        <p class="lead">面对浏览器里越积越多的书签、收藏夹和临时链接，找起来往往比重新搜索还慢。一色导航按用途把常用站点整理成清晰分类，让你少翻几屏，直接抵达想去的地方。</p>
+        <form class="hero-search" role="search" onsubmit="return quickSearch(event)">
+          <input type="text" id="heroSearchInput" placeholder="输入关键词，例如：翻译、素材、效率工具" aria-label="搜索站点">
+          <button type="submit">立即查找</button>
+        </form>
+        <div class="hero-tags">
+          <span>热门入口：</span>
+          <a href="#categories">效率工具</a>
+          <a href="#categories">学习资源</a>
+          <a href="#categories">设计素材</a>
+          <a href="#categories">影音娱乐</a>
+          <a href="#categories">生活服务</a>
+        </div>
+      </div>
+
+      <aside class="hero-side" aria-label="快速入口">
+        <h2>今日高频入口</h2>
+        <ul class="quick-list">
+          <li><span class="quick-icon">搜</span>综合搜索<span class="desc">多引擎切换</span></li>
+          <li><span class="quick-icon">译</span>在线翻译<span class="desc">多语种互译</span></li>
+          <li><span class="quick-icon">云</span>云盘存储<span class="desc">文件同步</span></li>
+          <li><span class="quick-icon">图</span>图片素材<span class="desc">可商用图库</span></li>
+          <li><span class="quick-icon">码</span>代码托管<span class="desc">版本管理</span></li>
+          <li><span class="quick-icon">学</span>在线课程<span class="desc">系统学习</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 分类导航 -->
+  <section class="section" id="categories">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>分类导航<small>按使用场景划分，快速定位你要找的那一类站点</small></h2>
+        <a class="more" href="#picks">查看精选推荐 →</a>
+      </div>
+
+      <div class="cat-grid">
+        <article class="cat-card">
+          <div class="cat-top">
+            <span class="cat-badge b1">效</span>
+            <h3>效率与工具<small>日常办公、协作与实用小工具</small></h3>
+          </div>
+          <div class="cat-links">
+            <a href="#categories">在线文档</a>
+            <a href="#categories">思维导图</a>
+            <a href="#categories">格式转换</a>
+            <a href="#categories">二维码生成</a>
+            <a href="#categories">截图标注</a>
+            <a href="#categories">密码管理</a>
+          </div>
+        </article>
+
+        <article class="cat-card">
+          <div class="cat-top">
+            <span class="cat-badge b2">学</span>
+            <h3>学习与知识<small>课程、文档、百科与阅读资源</small></h3>
+          </div>
+          <div class="cat-links">
+            <a href="#categories">公开课平台</a>
+            <a href="#categories">技术文档</a>
+            <a href="#categories">百科词条</a>
+            <a href="#categories">电子书库</a>
+            <a href="#categories">语言学习</a>
+            <a href="#categories">学术检索</a>
+          </div>
+        </article>
+
+        <article class="cat-card">
+          <div class="cat-top">
+            <span class="cat-badge b3">创</span>
+            <h3>设计与创作<small>素材、配色、排版与灵感来源</small></h3>
+          </div>
+          <div class="cat-links">
+            <a href="#categories">免费图库</a>
+            <a href="#categories">图标库</a>
+            <a href="#categories">配色方案</a>
+            <a href="#categories">字体下载</a>
+            <a href="#categories">在线抠图</a>
+            <a href="#categories">视频剪辑</a>
+          </div>
+        </article>
+
+        <article class="cat-card">
+          <div class="cat-top">
+            <span class="cat-badge b4">娱</span>
+            <h3>影音与娱乐<small>视频、音乐、播客与轻娱乐</small></h3>
+          </div>
+          <div class="cat-links">
+            <a href="#categories">视频平台</a>
+            <a href="#categories">音乐电台</a>
+            <a href="#categories">播客节目</a>
+            <a href="#categories">在线电台</a>
+            <a href="#categories">游戏资讯</a>
+            <a href="#categories">影讯速览</a>
+          </div>
+        </article>
+
+        <article class="cat-card">
+          <div class="cat-top">
+            <span class="cat-badge b5">活</span>
+            <h3>生活与服务<small>出行、购物、健康与便民查询</small></h3>
+          </div>
+          <div class="cat-links">
+            <a href="#categories">地图导航</a>
+            <a href="#categories">天气查询</a>
+            <a href="#categories">快递追踪</a>
+            <a href="#categories">比价平台</a>
+            <a href="#categories">健康科普</a>
+            <a href="#categories">本地生活</a>
+          </div>
+        </article>
+
+        <article class="cat-card">
+          <div class="cat-top">
+            <span class="cat-badge b6">开</span>
+            <h3>开发与技术<small>代码、部署、调试与开源社区</small></h3>
+          </div>
+          <div class="cat-links">
+            <a href="#categories">代码托管</a>
+            <a href="#categories">在线编辑器</a>
+            <a href="#categories">接口调试</a>
+            <a href="#categories">开源社区</a>
+            <a href="#categories">云服务商</a>
+            <a href="#categories">技术问答</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 精选推荐 -->
+  <section class="section" id="picks" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>精选推荐<small>从高频使用场景出发，挑出值得放进首页的站点类型</small></h2>
+        <a class="more" href="#guide">了解挑选标准 →</a>
+      </div>
+
+      <div class="pick-grid">
+        <article class="pick-card">
+          <div class="pc-head">
+            <span class="pc-logo">搜</span>
+            <h3>聚合搜索入口</h3>
+          </div>
+          <p>把多个搜索引擎、垂直搜索和站内检索集中在一页，需要换引擎时不必反复打开新标签。</p>
+          <span class="pc-tag">高频刚需</span>
+        </article>
+
+        <article class="pick-card">
+          <div class="pc-head">
+            <span class="pc-logo">译</span>
+            <h3>翻译与语言工具</h3>
+          </div>
+          <p>支持文本、网页与文档翻译，适合阅读外文资料、核对专业术语和日常跨语言沟通。</p>
+          <span class="pc-tag">跨语言</span>
+        </article>
+
+        <article class="pick-card">
+          <div class="pc-head">
+            <span class="pc-logo">图</span>
+            <h3>可商用素材站</h3>
+          </div>
+          <p>集中收藏图片、图标、插画类素材来源，创作时先确认授权范围，再决定是否使用。</p>
+          <span class="pc-tag">创作必备</span>
+        </article>
+
+        <article class="pick-card">
+          <div class="pc-head">
+            <span class="pc-logo">文</span>
+            <h3>在线文档协作</h3>
+          </div>
+          <p>多人同时编辑、评论与版本回溯，适合团队写方案、整理会议记录和共享资料。</p>
+          <span class="pc-tag">团队协作</span>
+        </article>
+
+        <article class="pick-card">
+          <div class="pc-head">
+            <span class="pc-logo">码</span>
+            <h3>代码与版本管理</h3>
+          </div>
+          <p>托管仓库、提交记录和 Issues 跟踪，是开发者日常协作与备份代码的常用入口。</p>
+          <span class="pc-tag">开发者</span>
+        </article>
+
+        <article class="pick-card">
+          <div class="pc-head">
+            <span class="pc-logo">云</span>
+            <h3>云存储与同步</h3>
+          </div>
+          <p>在不同设备之间同步文件，注意区分个人版与团队版的容量、权限和分享规则。</p>
+          <span class="pc-tag">跨设备</span>
+        </article>
+
+        <article class="pick-card">
+          <div class="pc-head">
+            <span class="pc-logo">学</span>
+            <h3>系统化学习平台</h3>
+          </div>
+          <p>按课程目录循序渐进地学一门技能，比零散看短视频更容易形成完整知识结构。</p>
+          <span class="pc-tag">长期收益</span>
+        </article>
+
+        <article class="pick-card">
+          <div class="pc-head">
+            <span class="pc-logo">查</span>
+            <h3>信息核验工具</h3>
+          </div>
+          <p>遇到不确定的说法时，先回到权威来源核对，再决定是否采信和转发。</p>
+          <span class="pc-tag">理性上网</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 使用指南 -->
+  <section class="section" id="guide">
+    <div class="wrap guide-wrap">
+      <article class="article-block">
+        <h2>一色导航怎么用：从收藏到高效检索</h2>
+        <p>导航站的价值不在于收录多少条链接，而在于当你需要某个入口时，能不能在几秒内找到它。一色导航围绕这个目标组织页面：先按用途分类，再按使用频率排序，最后用搜索兜底。</p>
+
+        <h3>一、先建立自己的分类习惯</h3>
+        <p>很多人的收藏夹之所以混乱，是因为分类标准不统一：有时按网站类型分，有时按项目分，有时随手一存。建议固定一种维度，例如按“工作 / 学习 / 生活 / 娱乐”四大类，再在每类下细分。分类一旦稳定，回忆和检索都会变快。</p>
+
+        <h3>二、把入口和内容分开</h3>
+        <p>导航页适合放“入口”，也就是你经常要打开首页的站点；而具体某一篇文章、某个商品页、某次会议链接，更适合放在笔记或待办工具里。入口和内容混在一起，导航就会迅速膨胀到无法维护。</p>
+
+        <div class="tip-box">
+          建议每个分类控制在 10 至 15 个入口以内。超过这个数量，说明该分类还可以继续拆分，或者其中一部分链接其实并不常用。
+        </div>
+
+        <h3>三、定期清理失效与低频链接</h3>
+        <p>网站会改版、迁移甚至停止服务。建议每隔一两个月检查一次，把打不开的链接删掉，把半年没用过的入口移到“备用”分组。保持导航页精简，比不断往里加东西更重要。</p>
+
+        <h3>四、用搜索而不是翻页</h3>
+        <p>当分类已经成型，搜索就是最快的路径。一色导航的搜索框支持按站点名称和分类关键词查找，输入两三个字通常就能定位目标，避免在多个分组之间来回切换。</p>
+
+        <h3>五、注意访问安全</h3>
+        <p>导航站只做入口整理，不改变目标网站本身的性质。访问任何站点时，仍要留意域名是否正确、页面是否要求输入敏感信息、下载内容是否来源清晰。涉及账号密码和支付操作时，优先使用官方客户端或手动输入网址。</p>
+
+        <h3>六、让导航适配自己的设备</h3>
+        <p>如果主要在电脑上使用，可以把导航页设为浏览器主页或新标签页；如果手机使用更多，可以把它添加到主屏幕，作为轻量级的应用入口集合。两种方式都不需要额外安装软件。</p>
+      </article>
+
+      <aside class="side-stack">
+        <div class="side-card">
+          <h3>挑选入口的三个标准</h3>
+          <ol>
+            <li><b>高频</b>：一周内至少会用一次，才值得放进首页。</li>
+            <li><b>稳定</b>：域名和运营方相对稳定，不容易突然消失。</li>
+            <li><b>不可替代</b>：同类站点中它解决了你具体的问题。</li>
+          </ol>
+        </div>
+
+        <div class="side-card">
+          <h3>不建议放进导航的内容</h3>
+          <ul>
+            <li>一次性的活动页和临时报名链接</li>
+            <li>需要登录才能看到内容的私人链接</li>
+            <li>来源不明、无法确认安全性的下载站</li>
+            <li>已经长期无法访问的旧地址</li>
+          </ul>
+        </div>
+
+        <div class="side-card">
+          <h3>维护小节奏</h3>
+          <ul>
+            <li>每周：补充 1 至 2 个新发现的入口</li>
+            <li>每月：清理一次失效链接</li>
+            <li>每季度：重新审视分类是否仍然合理</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 上手步骤 -->
+  <section class="section" id="steps" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>四步上手一色导航<small>不需要注册，也不需要安装任何软件</small></h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>浏览分类</h3>
+          <p>先从上方的六大分类中找到与自己需求最接近的一类，快速扫一遍有哪些入口。</p>
+        </div>
+        <div class="step">
+          <h3>搜索定位</h3>
+          <p>如果已经知道要找什么，直接在搜索框输入关键词，比逐级翻分类更快。</p>
+        </div>
+        <div class="step">
+          <h3>设为首页</h3>
+          <p>在浏览器设置中把本页设为主页或新标签页，每次打开浏览器都能直接进入。</p>
+        </div>
+        <div class="step">
+          <h3>持续整理</h3>
+          <p>按自己的习惯增删入口，让导航页始终贴合当前的工作与生活节奏。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>常见问题<small>关于导航站使用与维护的高频疑问</small></h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" type="button" onclick="toggleFaq(this)">
+            一色导航会收录哪些类型的网站？
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-a">
+            <p>以日常高频使用的工具、学习、设计、影音、生活服务和开发类站点为主。收录时更看重实用性和稳定性，而不是数量。具体分类会随使用场景的变化持续调整。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" onclick="toggleFaq(this)">
+            使用导航站需要注册或付费吗？
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-a">
+            <p>浏览和搜索入口不需要注册，也不涉及付费。导航站本身只提供链接整理，具体站点是否需要账号、是否收费，取决于目标网站自己的规则。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" onclick="toggleFaq(this)">
+            发现链接打不开怎么办？
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-a">
+            <p>网站可能因为改版、迁移或临时维护而暂时无法访问。可以先尝试搜索该站点的最新地址，确认是否已经更换域名；如果长期无法访问，建议从导航中移除。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" onclick="toggleFaq(this)">
+            可以把自己常用的网站加进来吗？
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-a">
+            <p>导航页的设计初衷就是让每个人按自己的习惯整理入口。你可以把它当作个人首页模板，根据自己的使用频率调整分类和顺序，不必完全照搬默认结构。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" onclick="toggleFaq(this)">
+            导航站和浏览器书签有什么区别？
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-a">
+            <p>书签适合长期保存大量链接，但层级深、查找慢；导航页把最常用的入口平铺在一屏之内，更适合作为每天的起点。两者可以配合使用：书签做仓库，导航页做快捷面板。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" onclick="toggleFaq(this)">
+            手机上使用体验如何？
+            <span class="arrow">▼</span>
+          </button>
+          <div class="faq-a">
+            <p>页面采用响应式布局，在手机上会自动调整为单列显示，分类卡片和搜索框都能正常点击。也可以把页面添加到手机主屏幕，当作轻量入口使用。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="logo" href="#top">
+          <span class="logo-mark">一</span>
+          <span>一色导航<small>YISE NAV</small></span>
+        </a>
+        <p>一个简洁的网址分类导航页，帮助你整理常用入口、减少无效翻找，把注意力留给真正要做的事。</p>
+      </div>
+
+      <div class="foot-col">
+        <h4>分类导航</h4>
+        <a href="#categories">效率与工具</a>
+        <a href="#categories">学习与知识</a>
+        <a href="#categories">设计与创作</a>
+        <a href="#categories">影音与娱乐</a>
+      </div>
+
+      <div class="foot-col">
+        <h4>使用帮助</h4>
+        <a href="#guide">使用指南</a>
+        <a href="#steps">上手步骤</a>
+        <a href="#faq">常见问题</a>
+        <a href="#picks">精选推荐</a>
+      </div>
+
+      <div class="foot-col">
+        <h4>使用建议</h4>
+        <a href="#guide">如何整理分类</a>
+        <a href="#guide">定期清理链接</a>
+        <a href="#guide">访问安全提示</a>
+        <a href="#guide">设为浏览器首页</a>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>一色导航 · 网址分类与入口整理</span>
+      <span>页面内容仅作入口整理与使用说明，不代表对第三方站点的背书。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function quickSearch(e){
+  e.preventDefault();
+  var input = document.getElementById('topSearchInput');
+  var hero = document.getElementById('heroSearchInput');
+  var val = '';
+  if (e.target.querySelector('input')) {
+    val = e.target.querySelector('input').value.trim();
+  }
+  if (!val) {
+    val = (hero && hero.value ? hero.value.trim() : '') || (input ? input.value.trim() : '');
+  }
+  if (!val) {
+    alert('请输入要查找的关键词，例如“翻译”“素材”或“云盘”。');
+    return false;
+  }
+  var target = document.getElementById('categories');
+  if (target) {
+    target.scrollIntoView({behavior:'smooth'});
+  }
+  return false;
+}
+
+function toggleFaq(btn){
+  var item = btn.parentElement;
+  var answer = btn.nextElementSibling;
+  var isOpen = item.classList.contains('open');
+  var allItems = document.querySelectorAll('.faq-item');
+  allItems.forEach(function(el){
+    el.classList.remove('open');
+    var a = el.querySelector('.faq-a');
+    if (a) a.style.maxHeight = null;
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+  }
+}
+</script>
+
+</body>
+  </html>
