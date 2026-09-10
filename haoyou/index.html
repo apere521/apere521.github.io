@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>好游快爆-发现好玩新游与游戏资讯的玩家社区</title>
+<meta name="description" content="好游快爆为玩家提供新游发现、游戏资讯、攻略评测、开测提醒与玩家交流内容，帮助你在海量手游中找到真正值得玩的作品。">
+<meta name="keywords" content="好游快爆,好游快爆app,新游推荐,手游资讯,游戏攻略,开测表,玩家社区">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#0f1017;
+--bg2:#161824;
+--card:#1c1f2e;
+--line:#282c3f;
+--txt:#e8eaf2;
+--sub:#9aa0b8;
+--main:#ff5f4d;
+--main2:#ffb03a;
+--blue:#4d8dff;
+--green:#3ecf8e;
+}
+body{
+font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+background:var(--bg);
+color:var(--txt);
+line-height:1.7;
+-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+ul{list-style:none}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 18px}
+
+/* ---------- header ---------- */
+.site-header{
+position:sticky;top:0;z-index:50;
+background:rgba(15,16,23,.92);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--line);
+}
+.header-inner{
+display:flex;align-items:center;justify-content:space-between;
+height:64px;gap:16px;
+}
+.logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;letter-spacing:.5px;white-space:nowrap}
+.logo-mark{
+width:34px;height:34px;border-radius:10px;
+background:linear-gradient(135deg,var(--main),var(--main2));
+display:flex;align-items:center;justify-content:center;
+font-size:16px;color:#1a1005;font-weight:900;
+}
+.logo span em{font-style:normal;color:var(--main2)}
+.main-nav{display:flex;align-items:center;gap:22px;font-size:15px;color:var(--sub)}
+.main-nav a{padding:6px 0;position:relative;transition:color .2s}
+.main-nav a:hover,.main-nav a.active{color:var(--txt)}
+.main-nav a.active::after{
+content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;
+background:linear-gradient(90deg,var(--main),var(--main2));border-radius:2px;
+}
+.header-actions{display:flex;align-items:center;gap:12px}
+.btn{
+display:inline-block;border-radius:999px;font-size:14px;font-weight:600;
+padding:9px 20px;transition:.2s;border:1px solid transparent;cursor:pointer;
+}
+.btn-main{background:linear-gradient(135deg,var(--main),var(--main2));color:#22130a}
+.btn-main:hover{filter:brightness(1.08)}
+.btn-ghost{border-color:var(--line);color:var(--sub)}
+.btn-ghost:hover{color:var(--txt);border-color:#3a4058}
+.nav-toggle{display:none;background:none;border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:6px 11px;font-size:16px}
+
+/* ---------- hero ---------- */
+.hero{
+position:relative;overflow:hidden;
+padding:64px 0 54px;
+background:
+radial-gradient(900px 380px at 12% -10%,rgba(255,95,77,.22),transparent 60%),
+radial-gradient(700px 340px at 88% 0%,rgba(77,141,255,.18),transparent 62%),
+var(--bg);
+border-bottom:1px solid var(--line);
+}
+.hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.tag-line{
+display:inline-flex;align-items:center;gap:8px;
+font-size:13px;color:var(--main2);
+background:rgba(255,176,58,.1);
+border:1px solid rgba(255,176,58,.28);
+padding:5px 14px;border-radius:999px;margin-bottom:18px;
+}
+.hero h1{font-size:40px;line-height:1.28;font-weight:800;letter-spacing:.3px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--main),var(--main2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{margin-top:18px;font-size:16px;color:var(--sub);max-width:560px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.hero-stats{display:flex;gap:34px;margin-top:34px;flex-wrap:wrap}
+.hero-stats div strong{display:block;font-size:22px;font-weight:800;color:var(--txt)}
+.hero-stats div span{font-size:13px;color:var(--sub)}
+.hero-panel{
+background:linear-gradient(180deg,var(--card),#171a27);
+border:1px solid var(--line);border-radius:18px;padding:22px;
+box-shadow:0 24px 60px rgba(0,0,0,.4);
+}
+.hero-panel h3{font-size:15px;color:var(--sub);font-weight:600;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center}
+.hero-panel h3 span{font-size:12px;color:var(--main2)}
+.mini-list li{
+display:flex;align-items:center;gap:12px;
+padding:11px 0;border-bottom:1px dashed var(--line);
+}
+.mini-list li:last-child{border-bottom:none}
+.mini-cover{
+width:44px;height:44px;border-radius:12px;flex:0 0 44px;
+display:flex;align-items:center;justify-content:center;
+font-weight:800;font-size:15px;color:#14161f;
+}
+.c1{background:linear-gradient(135deg,#ff8a5c,#ff5f4d)}
+.c2{background:linear-gradient(135deg,#7fb2ff,#4d8dff)}
+.c3{background:linear-gradient(135deg,#63e2ab,#3ecf8e)}
+.c4{background:linear-gradient(135deg,#ffd76e,#ffb03a)}
+.mini-info{flex:1;min-width:0}
+.mini-info b{display:block;font-size:14.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mini-info small{color:var(--sub);font-size:12.5px}
+.mini-tag{font-size:12px;color:var(--main2);border:1px solid rgba(255,176,58,.35);border-radius:6px;padding:2px 7px;white-space:nowrap}
+
+/* ---------- section base ---------- */
+section{padding:56px 0}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:28px;flex-wrap:wrap}
+.section-head h2{font-size:24px;font-weight:800;letter-spacing:.3px}
+.section-head h2 small{display:block;font-size:13px;color:var(--sub);font-weight:500;margin-top:6px;letter-spacing:0}
+.section-head .more{font-size:14px;color:var(--sub)}
+.section-head .more:hover{color:var(--main2)}
+
+/* ---------- categories ---------- */
+.cat-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.cat-card{
+background:var(--card);border:1px solid var(--line);border-radius:14px;
+padding:18px 14px;text-align:center;transition:.22s;
+}
+.cat-card:hover{transform:translateY(-4px);border-color:#3c4considered}
+.cat-card:hover{border-color:#3c425e;background:#20243a}
+.cat-icon{font-size:22px;margin-bottom:8px}
+.cat-card b{display:block;font-size:14.5px;font-weight:600}
+.cat-card span{font-size:12px;color:var(--sub)}
+
+/* ---------- picks ---------- */
+.pick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pick-card{
+background:var(--card);border:1px solid var(--line);border-radius:16px;
+overflow:hidden;transition:.22s;display:flex;flex-direction:column;
+}
+.pick-card:hover{transform:translateY(-5px);border-color:#3c425e;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.pick-top{height:110px;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:900;color:#14161f;letter-spacing:1px}
+.pick-body{padding:18px;flex:1;display:flex;flex-direction:column}
+.pick-body h3{font-size:17px;font-weight:700;margin-bottom:8px}
+.pick-body p{font-size:14px;color:var(--sub);flex:1}
+.pick-meta{display:flex;align-items:center;justify-content:space-between;margin-top:16px;font-size:12.5px;color:var(--sub)}
+.pick-meta .score{color:var(--main2);font-weight:700;font-size:14px}
+
+/* ---------- news ---------- */
+.news-layout{display:grid;grid-template-columns:1.35fr 1fr;gap:34px}
+.news-main article{
+border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:20px;
+}
+.news-main article:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.news-main h3{font-size:18px;font-weight:700;margin-bottom:8px}
+.news-main h3:hover{color:var(--main2)}
+.news-main p{font-size:14px;color:var(--sub)}
+.news-main .meta{font-size:12.5px;color:#6d7391;margin-top:10px;display:flex;gap:14px;flex-wrap:wrap}
+.news-side{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:22px}
+.news-side h3{font-size:16px;font-weight:700;margin-bottom:14px}
+.news-side ol{counter-reset:rank}
+.news-side li{
+counter-increment:rank;position:relative;padding-left:34px;
+font-size:14.5px;padding-top:9px;padding-bottom:9px;color:#cfd3e4;
+border-bottom:1px dashed var(--line);
+}
+.news-side li:last-child{border-bottom:none}
+.news-side li::before{
+content:counter(rank);
+position:absolute;left:0;top:9px;
+width:22px;height:22px;border-radius:6px;
+background:#252a3f;color:var(--sub);
+font-size:12px;font-weight:700;
+display:flex;align-items:center;justify-content:center;
+}
+.news-side li:nth-child(1)::before{background:linear-gradient(135deg,var(--main),var(--main2));color:#241408}
+.news-side li:nth-child(2)::before{background:#3a4060;color:#dfe3f2}
+.news-side li:nth-child(3)::before{background:#333a55;color:#dfe3f2}
+
+/* ---------- guides ---------- */
+.guide-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.guide-card{
+background:linear-gradient(180deg,var(--card),#181b28);
+border:1px solid var(--line);border-radius:14px;padding:20px;transition:.22s;
+}
+.guide-card:hover{border-color:#3c425e;transform:translateY(-3px)}
+.guide-card .num{font-size:12px;color:var(--main2);font-weight:700;letter-spacing:1px}
+.guide-card h3{font-size:15.5px;font-weight:700;margin:10px 0 8px}
+.guide-card p{font-size:13.5px;color:var(--sub)}
+
+/* ---------- community ---------- */
+.community{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.topic-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.topic{
+background:var(--card);border:1px solid var(--line);border-radius:14px;
+padding:20px;display:flex;gap:16px;transition:.22s;
+}
+.topic:hover{border-color:#3c425e}
+.avatar{
+width:46px;height:46px;border-radius:50%;flex:0 0 46px;
+display:flex;align-items:center;justify-content:center;
+font-weight:800;color:#14161f;font-size:15px;
+}
+.topic-body h3{font-size:15.5px;font-weight:700;margin-bottom:6px}
+.topic-body p{font-size:13.5px;color:var(--sub)}
+.topic-foot{font-size:12.5px;color:#6d7391;margin-top:10px;display:flex;gap:16px}
+
+/* ---------- faq ---------- */
+.faq-list{max-width:880px}
+.faq-item{
+border:1px solid var(--line);border-radius:12px;margin-bottom:12px;
+background:var(--card);overflow:hidden;
+}
+.faq-item summary{
+cursor:pointer;padding:16px 20px;font-size:15.5px;font-weight:600;
+list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{
+content:"+";color:var(--main2);font-size:19px;font-weight:700;transition:.2s;
+}
+.faq-item[open] summary::after{content:"−"}
+.faq-item .faq-body{padding:0 20px 18px;font-size:14px;color:var(--sub)}
+
+/* ---------- footer ---------- */
+.site-footer{background:#0b0c12;border-top:1px solid var(--line);padding:48px 0 26px}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:30px}
+.footer-brand p{font-size:13.5px;color:var(--sub);margin-top:14px;max-width:320px}
+.footer-col h4{font-size:14px;font-weight:700;margin-bottom:14px}
+.footer-col a{display:block;font-size:13.5px;color:var(--sub);padding:5px 0;transition:.2s}
+.footer-col a:hover{color:var(--main2)}
+.footer-bottom{
+margin-top:34px;padding-top:20px;border-top:1px solid var(--line);
+display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+font-size:13px;color:#5f6580;
+}
+
+/* ---------- responsive ---------- */
+@media(max-width:1024px){
+.hero-inner{grid-template-columns:1fr;gap:34px}
+.cat-grid{grid-template-columns:repeat(3,1fr)}
+.pick-grid{grid-template-columns:repeat(2,1fr)}
+.guide-grid{grid-template-columns:repeat(2,1fr)}
+.news-layout{grid-template-columns:1fr}
+.footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+.main-nav{
+display:none;position:absolute;top:64px;left:0;right:0;
+background:#12141f;border-bottom:1px solid var(--line);
+flex-direction:column;gap:0;padding:8px 18px 16px;
+}
+.main-nav.open{display:flex}
+.main-nav a{padding:12px 0;border-bottom:1px solid var(--line);width:100%}
+.main-nav a.active::after{display:none}
+.nav-toggle{display:block}
+.hero{padding:44px 0 40px}
+.hero h1{font-size:29px}
+.hero p.lead{font-size:15px}
+.hero-stats{gap:24px}
+.section-head h2{font-size:20px}
+.topic-grid{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+.cat-grid{grid-template-columns:repeat(2,1fr)}
+.pick-grid{grid-template-columns:1fr}
+.guide-grid{grid-template-columns:1fr}
+.footer-grid{grid-template-columns:1fr}
+.hero h1{font-size:25px}
+.header-actions .btn-ghost{display:none}
+section{padding:42px 0}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top">
+      <span class="logo-mark">爆</span>
+      <span>好游<em>快爆</em></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#top" class="active">首页</a>
+      <a href="#category">游戏分类</a>
+      <a href="#picks">编辑推荐</a>
+      <a href="#news">游戏资讯</a>
+      <a href="#guides">攻略评测</a>
+      <a href="#community">玩家社区</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-ghost" href="#community">登录社区</a>
+      <a class="btn btn-main" href="#picks">找游戏</a>
+      <button class="nav-toggle" id="navToggle" aria-label="展开导航">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="tag-line">新游发现 · 开测提醒 · 玩家真实评价</span>
+        <h1>在好游快爆，先看清一款游戏<br>再决定要不要<em>下载</em></h1>
+        <p class="lead">
+          面对应用商店里铺天盖地的手游，玩家最缺的不是数量，而是判断依据。好游快爆围绕新游发现、开测信息、玩家评价与攻略评测组织内容，让你在下载之前就能了解玩法类型、上手门槛与真实口碑，少走弯路。
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-main" href="#picks">浏览本期推荐</a>
+          <a class="btn btn-ghost" href="#news">查看游戏资讯</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>按类型筛选</strong><span>动作 / 策略 / 休闲 / 独立</span></div>
+          <div><strong>按阶段查看</strong><span>预约 / 测试 / 已上线</span></div>
+          <div><strong>按口碑排序</strong><span>玩家评价与编辑点评</span></div>
+        </div>
+      </div>
+
+      <aside class="hero-panel">
+        <h3>近期值得留意 <span>编辑整理</span></h3>
+        <ul class="mini-list">
+          <li>
+            <span class="mini-cover c1">动</span>
+            <span class="mini-info">
+              <b>动作类新作合集</b>
+              <small>强调操作手感与连招节奏</small>
+            </span>
+            <span class="mini-tag">测试中</span>
+          </li>
+          <li>
+            <span class="mini-cover c2">策</span>
+            <span class="mini-info">
+              <b>策略与模拟经营</b>
+              <small>适合慢节奏、长线投入的玩家</small>
+            </span>
+            <span class="mini-tag">已上线</span>
+          </li>
+          <li>
+            <span class="mini-cover c3">休</span>
+            <span class="mini-info">
+              <b>轻量休闲小品</b>
+              <small>碎片时间可玩，上手门槛低</small>
+            </span>
+            <span class="mini-tag">可预约</span>
+          </li>
+          <li>
+            <span class="mini-cover c4">独</span>
+            <span class="mini-info">
+              <b>独立游戏观察</b>
+              <small>玩法创意优先，题材更自由</small>
+            </span>
+            <span class="mini-tag">关注中</span>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 分类 -->
+  <section id="category">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>按玩法找游戏<small>先明确自己想玩什么，再进入具体列表，比漫无目的地刷榜单更高效</small></h2>
+        <a class="more" href="#picks">查看全部推荐 →</a>
+      </div>
+      <div class="cat-grid">
+        <a class="cat-card" href="#picks"><div class="cat-icon">⚔️</div><b>动作冒险</b><span>手感与打击感</span></a>
+        <a class="cat-card" href="#picks"><div class="cat-icon">🧠</div><b>策略战棋</b><span>思考与运营</span></a>
+        <a class="cat-card" href="#picks"><div class="cat-icon">🌾</div><b>模拟经营</b><span>长线养成</span></a>
+        <a class="cat-card" href="#picks"><div class="cat-icon">🎈</div><b>休闲益智</b><span>碎片时间</span></a>
+        <a class="cat-card" href="#picks"><div class="cat-icon">🎭</div><b>角色扮演</b><span>剧情与成长</span></a>
+        <a class="cat-card" href="#picks"><div class="cat-icon">🕹️</div><b>独立创意</b><span>玩法优先</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 编辑推荐 -->
+  <section id="picks" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>编辑推荐<small>不只看画面，更关注玩法是否耐玩、上手是否顺畅、长期更新是否稳定</small></h2>
+        <a class="more" href="#guides">阅读评测方法 →</a>
+      </div>
+      <div class="pick-grid">
+        <article class="pick-card">
+          <div class="pick-top c1">动作</div>
+          <div class="pick-body">
+            <h3>硬核动作类</h3>
+            <p>强调闪避、格挡与连招节奏，适合愿意花时间练习操作的玩家。挑选时重点关注帧率表现与按键布局是否可自定义。</p>
+            <div class="pick-meta"><span>适合：追求操作反馈</span><span class="score">上手偏难</span></div>
+          </div>
+        </article>
+        <article class="pick-card">
+          <div class="pick-top c2">策略</div>
+          <div class="pick-body">
+            <h3>策略与战棋类</h3>
+            <p>核心乐趣在于资源分配与阵容搭配。判断一款策略游戏是否值得长期玩，可以看它的数值成长是否给玩家留出多种解法。</p>
+            <div class="pick-meta"><span>适合：喜欢规划</span><span class="score">节奏偏慢</span></div>
+          </div>
+        </article>
+        <article class="pick-card">
+          <div class="pick-top c3">休闲</div>
+          <div class="pick-body">
+            <h3>轻量休闲类</h3>
+            <p>单局时间短、规则直观，适合通勤或休息间隙。注意区分“轻松上手”和“靠重复劳动拖延时间”，后者体验容易疲劳。</p>
+            <div class="pick-meta"><span>适合：碎片时间</span><span class="score">上手轻松</span></div>
+          </div>
+        </article>
+        <article class="pick-card">
+          <div class="pick-top c4">独立</div>
+          <div class="pick-body">
+            <h3>独立创意类</h3>
+            <p>往往以单一核心机制展开，题材和美术风格更自由。这类作品体量不一，建议先看玩家对流程长度与完成度的反馈。</p>
+            <div class="pick-meta"><span>适合：尝鲜玩家</span><span class="score">风格鲜明</span></div>
+          </div>
+        </article>
+        <article class="pick-card">
+          <div class="pick-top c2">剧情</div>
+          <div class="pick-body">
+            <h3>剧情向角色扮演</h3>
+            <p>以叙事推进为主，战斗系统服务于故事。挑选时留意文本量、配音完整度以及是否有跳过与回顾功能。</p>
+            <div class="pick-meta"><span>适合：喜欢故事</span><span class="score">沉浸体验</span></div>
+          </div>
+        </article>
+        <article class="pick-card">
+          <div class="pick-top c1">联机</div>
+          <div class="pick-body">
+            <h3>多人合作类</h3>
+            <p>乐趣来自与朋友配合。评估重点在于匹配速度、网络稳定性以及单人游玩时是否仍然成立。</p>
+            <div class="pick-meta"><span>适合：有固定队友</span><span class="score">社交属性强</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 资讯 -->
+  <section id="news">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>游戏资讯与动态<small>关注版本更新、测试节点与玩法调整，比追逐零散传闻更有参考价值</small></h2>
+      </div>
+      <div class="news-layout">
+        <div class="news-main">
+          <article>
+            <h3>怎样判断一款新游是否值得提前预约</h3>
+            <p>预约本身不产生成本，但会占用你的关注。比较稳妥的做法是先确认开发团队过往作品、已公开的实机演示，以及测试阶段玩家对核心玩法的描述，再决定是否加入预约列表。</p>
+            <div class="meta"><span>新游观察</span><span>阅读约 4 分钟</span></div>
+          </article>
+          <article>
+            <h3>版本更新公告里，哪些信息最值得细看</h3>
+            <p>更新日志通常包含数值调整、新增玩法与问题修复三部分。对长期玩家而言，数值调整往往比新增内容影响更大，它可能直接改变已有的养成路线与阵容思路。</p>
+            <div class="meta"><span>版本解读</span><span>阅读约 5 分钟</span></div>
+          </article>
+          <article>
+            <h3>测试服与正式服体验差异从哪里来</h3>
+            <p>测试阶段的内容往往带有临时性，数值、掉落与平衡性都可能调整。把测试体验直接当作正式版本预期，容易产生落差，建议结合官方说明与多份玩家反馈综合判断。</p>
+            <div class="meta"><span>玩法科普</span><span>阅读约 4 分钟</span></div>
+          </article>
+        </div>
+        <aside class="news-side">
+          <h3>本周玩家关注方向</h3>
+          <ol>
+            <li>新游首次测试资格与参与方式</li>
+            <li>热门作品版本更新后的平衡变化</li>
+            <li>独立游戏的玩法创意讨论</li>
+            <li>长线运营游戏的日常负担问题</li>
+            <li>手游在移动设备上的性能表现</li>
+            <li>剧情向作品的叙事节奏评价</li>
+          </ol>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 攻略评测 -->
+  <section id="guides" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>攻略与评测方法<small>比起一句“好玩”，更希望告诉你它为什么好玩、适合谁玩</small></h2>
+      </div>
+      <div class="guide-grid">
+        <article class="guide-card">
+          <div class="num">01</div>
+          <h3>先看核心循环</h3>
+          <p>弄清楚玩家在一局或一天里反复做的事情是什么，这决定了游戏长期是否耐玩。</p>
+        </article>
+        <article class="guide-card">
+          <div class="num">02</div>
+          <h3>再看付费结构</h3>
+          <p>了解主要付费点落在外观、成长还是资源上，判断它是否会干扰正常体验节奏。</p>
+        </article>
+        <article class="guide-card">
+          <div class="num">03</div>
+          <h3>关注设备表现</h3>
+          <p>帧率稳定性、发热与耗电情况直接影响手感，尤其是动作与竞技类作品。</p>
+        </article>
+        <article class="guide-card">
+          <div class="num">04</div>
+          <h3>参考多方评价</h3>
+          <p>单一评价容易带情绪，把不同游玩时长的玩家反馈放在一起看会更接近真实情况。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 社区 -->
+  <section id="community" class="community">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>玩家社区讨论<small>来自不同进度玩家的经验，往往比宣传素材更能说明问题</small></h2>
+        <a class="more" href="#faq">参与方式 →</a>
+      </div>
+      <div class="topic-grid">
+        <div class="topic">
+          <span class="avatar c1">阿</span>
+          <div class="topic-body">
+            <h3>新手期最容易踩的坑有哪些</h3>
+            <p>资源该不该囤、前期要不要抽、主线推到哪一步再考虑养成，都是新玩家常问的问题。</p>
+            <div class="topic-foot"><span>新手交流</span><span>经验分享</span></div>
+          </div>
+        </div>
+        <div class="topic">
+          <span class="avatar c2">小</span>
+          <div class="topic-body">
+            <h3>中后期玩法会不会变得重复</h3>
+            <p>很多作品前期体验流畅，进入中后期后日常任务占比上升，这类变化值得提前了解。</p>
+            <div class="topic-foot"><span>长线体验</span><span>玩法讨论</span></div>
+          </div>
+        </div>
+        <div class="topic">
+          <span class="avatar c3">青</span>
+          <div class="topic-body">
+            <h3>低配设备怎么调设置更顺滑</h3>
+            <p>分辨率、特效与帧率上限之间存在取舍，合理设置通常比一味拉满更舒服。</p>
+            <div class="topic-foot"><span>设备优化</span><span>实用技巧</span></div>
+          </div>
+        </div>
+        <div class="topic">
+          <span class="avatar c4">木</span>
+          <div class="topic-body">
+            <h3>独立游戏值不值得第一时间入手</h3>
+            <p>体量小、更新节奏不定是常见情况，先看完成度反馈再决定，通常更稳妥。</p>
+            <div class="topic-foot"><span>独立游戏</span><span>选购参考</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>常见问题<small>关于找游戏、看评测与参与社区的高频疑问</small></h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>好游快爆主要能帮我解决什么问题？</summary>
+          <div class="faq-body">它更偏向“发现与判断”这一环：帮你在大量手游中筛选出符合自己口味的作品，并通过资讯、评测与玩家讨论，了解一款游戏在玩法、节奏和长期运营上的实际情况，从而减少盲目下载。</div>
+        </details>
+        <details class="faq-item">
+          <summary>预约一款游戏之后需要做什么？</summary>
+          <div class="faq-body">预约只是把作品加入关注范围。建议同时留意它的测试节点与官方公告，等到有实际可玩内容时再结合玩家反馈判断是否值得投入时间。</div>
+        </details>
+        <details class="faq-item">
+          <summary>评测分数能直接代表游戏质量吗？</summary>
+          <div class="faq-body">分数是参考之一，但不同玩家对同一款游戏的感受差异很大。更有效的方式是把评分与具体评价内容结合看，尤其是游玩时间较长的玩家所提到的优缺点。</div>
+        </details>
+        <details class="faq-item">
+          <summary>测试阶段的体验能代表正式版本吗？</summary>
+          <div class="faq-body">不一定。测试版本的内容、数值与平衡性都可能调整，部分功能也可能尚未开放。把测试体验当作参考而非结论会更合理。</div>
+        </details>
+        <details class="faq-item">
+          <summary>怎样在社区里获得更有用的回复？</summary>
+          <div class="faq-body">提问时说明自己的设备情况、游玩时长和具体困惑，比笼统地问“这游戏好玩吗”更容易得到有针对性的回答。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="#top">
+          <span class="logo-mark">爆</span>
+          <span>好游<em>快爆</em></span>
+        </a>
+        <p>围绕新游发现、资讯动态、攻略评测与玩家交流组织内容，帮助玩家在下载之前先看清一款游戏的真实面貌。</p>
+      </div>
+      <div class="footer-col">
+        <h4>找游戏</h4>
+        <a href="#category">玩法分类</a>
+        <a href="#picks">编辑推荐</a>
+        <a href="#news">开测与更新</a>
+        <a href="#guides">评测方法</a>
+      </div>
+      <div class="footer-col">
+        <h4>看内容</h4>
+        <a href="#news">游戏资讯</a>
+        <a href="#guides">攻略技巧</a>
+        <a href="#community">玩家讨论</a>
+        <a href="#faq">常见问题</a>
+      </div>
+      <div class="footer-col">
+        <h4>关于本站</h4>
+        <a href="#top">站点介绍</a>
+        <a href="#faq">使用说明</a>
+        <a href="#community">社区规范</a>
+        <a href="#top">内容建议</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>好游快爆 · 游戏发现与玩家交流内容平台</span>
+      <span>页面内容仅供参考，请以游戏官方公告为准</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('mainNav');
+  if(toggle && nav){
+    toggle.addEventListener('click', function(){
+      nav.classList.toggle('open');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        nav.classList.remove('open');
+      }
+    });
+  }
+  var links = document.querySelectorAll('.main-nav a');
+  links.forEach(function(a){
+    a.addEventListener('click', function(){
+      links.forEach(function(b){ b.classList.remove('active'); });
+      a.classList.add('active');
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
